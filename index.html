@@ -20,68 +20,133 @@
         crossorigin="anonymous"></script>
 
     <style>
+
+        html {
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+        .container {
+            width: 960px;
+        }
+
+        header {
+            background-color: #caeeff;
+        }
+
         header img {
             height: 100px;
         }
 
-        main img {
-            width: 100px;
+        /* header>div>form>button {
+            border: 1px solid #666;
+            color: #666;
+        } */
+
+        aside {
+            border-right: 1px solid #ccc;
         }
+
+        aside>div {
+            border-bottom: 1px solid #ccc;
+        }
+
+        h5 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.875rem;
+        }
+
+        .parcelamento {
+            font-size: 0.75rem;
+        }
+
+        .controles {
+            font-size: 0.75rem;
+        }
+
+        .card-img-top {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .card {
+            border: none;
+        }
+
+        .card:hover {
+            outline: 1px solid #F0F0F0;
+            cursor: pointer;
+        }
+
+        .controles a i {
+            color: #666;
+        }
+
+        .controles a i:hover {
+            color: black;
+        }
+
     </style>
 
 </head>
 
 <body>
 
-    <header class="bg-primary">
-        <div class="container d-flex justify-content-between">
+    <header>
+        <div class="container d-flex justify-content-between pt-4 pb-4">
             <img src="./img/logo.png" alt="Logo">
 
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Digite a sua busca" aria-label="Search">
+                <input class="form-control mr-sm-1" type="search" placeholder="Digite a sua busca" aria-label="Search">
                 <button class="btn btn-secondary" type="submit">Buscar</button>
             </form>
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse d-flex align-items-center" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-                </li>
+    <div class="bg-light">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg justify-content-center navbar-light bg-light">
+                <div class="collapse navbar-collapse d-flex justify-content-around" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Feminino</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Feminino</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Masculino</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Masculino</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Infantil</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Infantil</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Casa</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Casa</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Promoções</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Promoções</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
-                </li>
-            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </nav>
+    </div>
 
     <div class="container">
         <div class="row">
-            <aside class="mr-3 mt-3 p-3 border-right border-dark col-lg-3">
-                <div class="mt-3 pb-3 border-bottom border-dark">
+            <aside class="mt-3 p-3 col-lg-3">
+                <div class="mt-3 pb-3">
                     <span>Tipos</span>
                     <select class="custom-select" size="5">
                         <option value="1">Bota</option>
@@ -95,7 +160,7 @@
                     </select>
                 </div>
                 
-                <div class="mt-3 pb-3 border-bottom border-dark">
+                <div class="mt-3 pb-3">
                     <span>Tamanho</span>
                     <select class="custom-select" size="5">
                         <option value="">31</option>
@@ -117,7 +182,7 @@
                     </select>
                 </div>
 
-                <div class="mt-3 pb-3 border-bottom border-dark">
+                <div class="mt-3 pb-3">
                     <span>Marcas</span>
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -138,160 +203,172 @@
                 </div>
             </aside>
 
-            <main class="d-flex flex-wrap justify-content-around mt-4 col-lg-8">
-                <div class="card w-25 m-3 col-lg-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Produto 1</h5>
-                        <p class="card-text">Uma breve descrição do produto</p>
-                    </div>
-                    <img class="card-img-top" src="../tarefa-11/img/produto.jpg" alt="Card image cap">
-                    <div class="info-preco">
-                        <span class="preco">R$ 120,00</span>
-                        <span class="parcelamento">Ou
-                            <span>3x</span>
-                            de 
-                            <span>40,00</span>
-                        </span>
-                    </div>
-                    <div class="controles d-flex justify-content-between">
-                        <a class="favoritar">
-                            <i class="material-icons">favorite</i>
-                            Favorito
-                        </a>
-                        <a class="comprar">
-                            <i class="material-icons">favorite</i>
-                            Comprar
-                        </a>
-                    </div>
-                </div>
-
-                <div class="card w-25 m-3 col-lg-3" >
-                    <div class="card-body">
-                        <h5 class="card-title">Produto 2</h5>
-                        <p class="card-text">Uma breve descrição do produto</p>
-                    </div>
-                    <img class="card-img-top" src="../tarefa-11/img/produto.jpg" alt="Card image cap">
-                    <div class="info-preco">
-                        <span class="preco">R$ 120,00</span>
-                        <span class="parcelamento">Ou
-                            <span>3x</span>
-                            de 
-                            <span>40,00</span>
-                        </span>
-                    </div>
-                    <div class="controles d-flex justify-content-between">
-                        <a class="favoritar">
-                            <i class="material-icons">favorite</i>
-                            Favorito
-                        </a>
-                        <a class="comprar">
-                            <i class="material-icons">favorite</i>
-                            Comprar
-                        </a>
+            <main class="d-flex flex-wrap justify-content-around mt-5 col-lg-9">
+                <div class="col-lg-4 mb-3">
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <h5 class="card-title">Produto 1</h5>
+                            <p class="card-text">Uma breve descrição do produto</p>
+                            <img class="card-img-top" src="../tarefa-11/img/produto.jpg" alt="Card image cap">
+                            <div class="info-preco text-center my-3">
+                                <span class="preco d-block">R$ 120,00</span>
+                                <span class="parcelamento d-block">Ou
+                                    <span>3x</span>
+                                    de 
+                                    <span>40,00</span>
+                                </span>
+                            </div>
+                            <div class="controles d-flex justify-content-between p-2">
+                                <a class="favoritar d-flex flex-column text-center">
+                                    <i class="material-icons">favorite</i>
+                                    Favorito
+                                </a>
+                                <a class="comprar d-flex flex-column text-center">
+                                    <i class="material-icons">attach_money</i>
+                                    Comprar
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card w-25 m-3 col-lg-3" >
-                    <div class="card-body">
-                        <h5 class="card-title">Produto 3</h5>
-                        <p class="card-text">Uma breve descrição do produto</p>
-                    </div>
-                    <img class="card-img-top" src="../tarefa-11/img/produto.jpg" alt="Card image cap">
-                    <div class="info-preco">
-                        <span class="preco">R$ 120,00</span>
-                        <span class="parcelamento">Ou
-                            <span>3x</span>
-                            de 
-                            <span>40,00</span>
-                        </span>
-                    </div>
-                    <div class="controles d-flex justify-content-between">
-                        <a class="favoritar">
-                            <i class="material-icons">favorite</i>
-                            Favorito
-                        </a>
-                        <a class="comprar">
-                            <i class="material-icons">favorite</i>
-                            Comprar
-                        </a>
-                    </div>
-                </div>
-
-                <div class="card w-25 m-3 col-lg-3" >
-                    <div class="card-body">
-                        <h5 class="card-title">Produto 4</h5>
-                        <p class="card-text">Uma breve descrição do produto</p>
-                    </div>
-                    <img class="card-img-top" src="../tarefa-11/img/produto.jpg" alt="Card image cap">
-                    <div class="info-preco">
-                        <span class="preco">R$ 120,00</span>
-                        <span class="parcelamento">Ou
-                            <span>3x</span>
-                            de 
-                            <span>40,00</span>
-                        </span>
-                    </div>
-                    <div class="controles d-flex justify-content-between">
-                        <a class="favoritar">
-                            <i class="material-icons">favorite</i>
-                            Favorito
-                        </a>
-                        <a class="comprar">
-                            <i class="material-icons">favorite</i>
-                            Comprar
-                        </a>
+                <div class="col-lg-4 mb-3">
+                    <div class="card" >
+                        <div class="card-body p-2">
+                            <h5 class="card-title">Produto 2</h5>
+                            <p class="card-text">Uma breve descrição do produto</p>
+                            <img class="card-img-top" src="../tarefa-11/img/produto.jpg" alt="Card image cap">
+                            <div class="info-preco text-center my-3">
+                                <span class="preco d-block">R$ 120,00</span>
+                                <span class="parcelamento d-block">Ou
+                                    <span>3x</span>
+                                    de 
+                                    <span>40,00</span>
+                                </span>
+                            </div>
+                            <div class="controles d-flex justify-content-between p-2">
+                                <a class="favoritar d-flex flex-column text-center">
+                                    <i class="material-icons">favorite</i>
+                                    Favorito
+                                </a>
+                                <a class="comprar d-flex flex-column text-center">
+                                    <i class="material-icons">attach_money</i>
+                                    Comprar
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card w-25 m-3 col-lg-3" >
-                    <div class="card-body">
-                        <h5 class="card-title">Produto 5</h5>
-                        <p class="card-text">Uma breve descrição do produto</p>
-                    </div>
-                    <img class="card-img-top" src="../tarefa-11/img/produto.jpg" alt="Card image cap">
-                    <div class="info-preco">
-                        <span class="preco">R$ 120,00</span>
-                        <span class="parcelamento">Ou
-                            <span>3x</span>
-                            de 
-                            <span>40,00</span>
-                        </span>
-                    </div>
-                    <div class="controles d-flex justify-content-between">
-                        <a class="favoritar">
-                            <i class="material-icons">favorite</i>
-                            Favorito
-                        </a>
-                        <a class="comprar">
-                            <i class="material-icons">favorite</i>
-                            Comprar
-                        </a>
+                <div class="col-lg-4 mb-3">
+                    <div class="card" >
+                        <div class="card-body p-2">
+                            <h5 class="card-title">Produto 3</h5>
+                            <p class="card-text">Uma breve descrição do produto</p>
+                            <img class="card-img-top" src="../tarefa-11/img/produto.jpg" alt="Card image cap">
+                            <div class="info-preco text-center my-3">
+                                <span class="preco d-block">R$ 120,00</span>
+                                <span class="parcelamento d-block">Ou
+                                    <span>3x</span>
+                                    de 
+                                    <span>40,00</span>
+                                </span>
+                            </div>
+                            <div class="controles d-flex justify-content-between p-2">
+                                <a class="favoritar d-flex flex-column text-center">
+                                    <i class="material-icons">favorite</i>
+                                    Favorito
+                                </a>
+                                <a class="comprar d-flex flex-column text-center">
+                                    <i class="material-icons">attach_money</i>
+                                    Comprar
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card w-25 m-3 col-lg-3" >
-                    <div class="card-body">
-                        <h5 class="card-title">Produto 6</h5>
-                        <p class="card-text">Uma breve descrição do produto</p>
+                <div class="col-lg-4 mb-3">
+                    <div class="card" >
+                        <div class="card-body p-2">
+                            <h5 class="card-title">Produto 4</h5>
+                            <p class="card-text">Uma breve descrição do produto</p>
+                            <img class="card-img-top" src="../tarefa-11/img/produto.jpg" alt="Card image cap">
+                            <div class="info-preco text-center my-3">
+                                <span class="preco d-block">R$ 120,00</span>
+                                <span class="parcelamento d-block">Ou
+                                    <span>3x</span>
+                                    de 
+                                    <span>40,00</span>
+                                </span>
+                            </div>
+                            <div class="controles d-flex justify-content-between p-2">
+                                <a class="favoritar d-flex flex-column text-center">
+                                    <i class="material-icons">favorite</i>
+                                    Favorito
+                                </a>
+                                <a class="comprar d-flex flex-column text-center">
+                                    <i class="material-icons">attach_money</i>
+                                    Comprar
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <img class="card-img-top" src="../tarefa-11/img/produto.jpg" alt="Card image cap">
-                    <div class="info-preco">
-                        <span class="preco">R$ 120,00</span>
-                        <span class="parcelamento">Ou
-                            <span>3x</span>
-                            de 
-                            <span>40,00</span>
-                        </span>
+                </div>
+
+                <div class="col-lg-4 mb-3">
+                    <div class="card" >
+                        <div class="card-body p-2">
+                            <h5 class="card-title">Produto 5</h5>
+                            <p class="card-text">Uma breve descrição do produto</p>
+                            <img class="card-img-top" src="../tarefa-11/img/produto.jpg" alt="Card image cap">
+                            <div class="info-preco text-center my-3">
+                                <span class="preco d-block">R$ 120,00</span>
+                                <span class="parcelamento d-block">Ou
+                                    <span>3x</span>
+                                    de 
+                                    <span>40,00</span>
+                                </span>
+                            </div>
+                            <div class="controles d-flex justify-content-between p-2">
+                                <a class="favoritar d-flex flex-column text-center">
+                                    <i class="material-icons">favorite</i>
+                                    Favorito
+                                </a>
+                                <a class="comprar d-flex flex-column text-center">
+                                    <i class="material-icons">attach_money</i>
+                                    Comprar
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="controles d-flex justify-content-between">
-                        <a class="favoritar">
-                            <i class="material-icons">favorite</i>
-                            Favorito
-                        </a>
-                        <a class="comprar">
-                            <i class="material-icons">favorite</i>
-                            Comprar
-                        </a>
+                </div>
+
+                <div class="col-lg-4 mb-3">
+                    <div class="card" >
+                        <div class="card-body p-2">
+                            <h5 class="card-title">Produto 6</h5>
+                            <p class="card-text">Uma breve descrição do produto</p>
+                            <img class="card-img-top" src="../tarefa-11/img/produto.jpg" alt="Card image cap">
+                            <div class="info-preco text-center my-3">
+                                <span class="preco d-block">R$ 120,00</span>
+                                <span class="parcelamento d-block">Ou
+                                    <span>3x</span>
+                                    de 
+                                    <span>40,00</span>
+                                </span>
+                            </div>
+                            <div class="controles d-flex justify-content-between p-2">
+                                <a class="favoritar d-flex flex-column text-center">
+                                    <i class="material-icons">favorite</i>
+                                    Favorito
+                                </a>
+                                <a class="comprar d-flex flex-column text-center">
+                                    <i class="material-icons">attach_money</i>
+                                    Comprar
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
