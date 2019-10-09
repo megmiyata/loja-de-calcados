@@ -20,11 +20,11 @@
         crossorigin="anonymous"></script>
 
     <style>
-
         html {
             font-family: sans-serif;
             font-size: 16px;
         }
+
         .container {
             width: 960px;
         }
@@ -37,10 +37,41 @@
             height: 100px;
         }
 
-        /* header>div>form>button {
-            border: 1px solid #666;
+        .form-control {
+            border-radius: 0;
+        }
+
+        .btn {
+            background-color: #ccc;
             color: #666;
-        } */
+            border: solid 1px #ccc;
+            border-radius: 0;
+        }
+
+        .btn:hover {
+            background-color: #ccc;
+            color: #666;
+            border: solid 1px #ccc;
+        }
+
+        .navegacao {
+            background-color: #F0F0F0;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+
+        nav a {
+            color: #333;
+        }
+
+        .nav a:hover {
+            color: #333;
+            background-color: rgba(255,255,255,0.5);
+        }
+
+        .nav-pills .nav-link {
+            border-radius: 0;
+        }
 
         aside {
             border-right: 1px solid #ccc;
@@ -88,6 +119,13 @@
             color: black;
         }
 
+        footer {
+            background-color: #333;
+        }
+
+        .rodape {
+            background-color: #333;
+        }
     </style>
 
 </head>
@@ -99,47 +137,25 @@
             <img src="./img/logo.png" alt="Logo">
 
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-1" type="search" placeholder="Digite a sua busca" aria-label="Search">
-                <button class="btn btn-secondary" type="submit">Buscar</button>
+                <input class="form-control" type="search" placeholder="Digite a sua busca" aria-label="Search">
+                <button class="btn btn-secondary px-3" type="submit">Buscar</button>
             </form>
         </div>
     </header>
 
-    <div class="bg-light">
+    <div class="navegacao">
         <div class="container">
-            <nav class="navbar navbar-expand-lg justify-content-center navbar-light bg-light">
-                <div class="collapse navbar-collapse d-flex justify-content-around" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Feminino</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Masculino</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Infantil</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Casa</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Promoções</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <div class="row">
+                <nav class="nav nav-pills nav-fill col-lg-12">
+                    <a class="nav-item nav-link" href="#">Home</a>
+                    <a class="nav-item nav-link" href="#">Feminino</a>
+                    <a class="nav-item nav-link" href="#">Masculino</a>
+                    <a class="nav-item nav-link" href="#">Infantil</a>
+                    <a class="nav-item nav-link" href="#">Casa</a>
+                    <a class="nav-item nav-link" href="#">Promoções</a>
+                    <a class="nav-item nav-link" href="#">Contato</a>
+                </nav>
+            </div>
         </div>
     </div>
 
@@ -159,7 +175,7 @@
                         <option value="8">Sandália</option>
                     </select>
                 </div>
-                
+
                 <div class="mt-3 pb-3">
                     <span>Tamanho</span>
                     <select class="custom-select" size="5">
@@ -214,7 +230,7 @@
                                 <span class="preco d-block">R$ 120,00</span>
                                 <span class="parcelamento d-block">Ou
                                     <span>3x</span>
-                                    de 
+                                    de
                                     <span>40,00</span>
                                 </span>
                             </div>
@@ -233,7 +249,7 @@
                 </div>
 
                 <div class="col-lg-4 mb-3">
-                    <div class="card" >
+                    <div class="card">
                         <div class="card-body p-2">
                             <h5 class="card-title">Produto 2</h5>
                             <p class="card-text">Uma breve descrição do produto</p>
@@ -242,7 +258,7 @@
                                 <span class="preco d-block">R$ 120,00</span>
                                 <span class="parcelamento d-block">Ou
                                     <span>3x</span>
-                                    de 
+                                    de
                                     <span>40,00</span>
                                 </span>
                             </div>
@@ -261,7 +277,7 @@
                 </div>
 
                 <div class="col-lg-4 mb-3">
-                    <div class="card" >
+                    <div class="card">
                         <div class="card-body p-2">
                             <h5 class="card-title">Produto 3</h5>
                             <p class="card-text">Uma breve descrição do produto</p>
@@ -270,7 +286,7 @@
                                 <span class="preco d-block">R$ 120,00</span>
                                 <span class="parcelamento d-block">Ou
                                     <span>3x</span>
-                                    de 
+                                    de
                                     <span>40,00</span>
                                 </span>
                             </div>
@@ -289,7 +305,7 @@
                 </div>
 
                 <div class="col-lg-4 mb-3">
-                    <div class="card" >
+                    <div class="card">
                         <div class="card-body p-2">
                             <h5 class="card-title">Produto 4</h5>
                             <p class="card-text">Uma breve descrição do produto</p>
@@ -298,7 +314,7 @@
                                 <span class="preco d-block">R$ 120,00</span>
                                 <span class="parcelamento d-block">Ou
                                     <span>3x</span>
-                                    de 
+                                    de
                                     <span>40,00</span>
                                 </span>
                             </div>
@@ -317,7 +333,7 @@
                 </div>
 
                 <div class="col-lg-4 mb-3">
-                    <div class="card" >
+                    <div class="card">
                         <div class="card-body p-2">
                             <h5 class="card-title">Produto 5</h5>
                             <p class="card-text">Uma breve descrição do produto</p>
@@ -326,7 +342,7 @@
                                 <span class="preco d-block">R$ 120,00</span>
                                 <span class="parcelamento d-block">Ou
                                     <span>3x</span>
-                                    de 
+                                    de
                                     <span>40,00</span>
                                 </span>
                             </div>
@@ -345,7 +361,7 @@
                 </div>
 
                 <div class="col-lg-4 mb-3">
-                    <div class="card" >
+                    <div class="card">
                         <div class="card-body p-2">
                             <h5 class="card-title">Produto 6</h5>
                             <p class="card-text">Uma breve descrição do produto</p>
@@ -354,7 +370,7 @@
                                 <span class="preco d-block">R$ 120,00</span>
                                 <span class="parcelamento d-block">Ou
                                     <span>3x</span>
-                                    de 
+                                    de
                                     <span>40,00</span>
                                 </span>
                             </div>
@@ -375,13 +391,14 @@
         </div>
     </div>
 
-    <div class="bg-dark">
+    <div class="rodape">
         <div class="container">
-            <footer class="mt-3 bg-dark text-white text-justify">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque voluptatem illo eos mollitia veritatis maiores odio molestias similique repellat sapiente! Voluptate itaque assumenda aliquam reprehenderit tenetur cumque veniam laudantium quaerat.
+            <footer class="mt-3 p-3 text-white text-justify">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque voluptatem illo eos mollitia veritatis
+                maiores odio molestias similique repellat sapiente! Voluptate itaque assumenda aliquam reprehenderit
+                tenetur cumque veniam laudantium quaerat.
             </footer>
         </div>
-
     </div>
 </body>
 
